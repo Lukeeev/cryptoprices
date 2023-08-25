@@ -47,7 +47,7 @@ for i in soup.select('.simpTblRow'):
         if float(amount) != 0.00:
             calc_price_usd = float(crypto_price)*float(amount)
             calc_price_eur = (float(crypto_price)*float(amount))/float(eur)
-            print(Back.LIGHTRED_EX ,f'Crypto: {Fore.LIGHTYELLOW_EX} {crypto_symbol} {Fore.RESET}', Back.RESET)
+            print(Back.LIGHTRED_EX ,f'Crypto: {Fore.LIGHTYELLOW_EX} {crypto_symbol[:-4]} {Fore.RESET}', Back.RESET)
             print('')
             print(Back.GREEN, f'Value in $: {Fore.LIGHTYELLOW_EX} {calc_price_usd:.2f} {Fore.RESET}', Back.RESET)
             print('')
@@ -60,7 +60,7 @@ for i in soup.select('.simpTblRow'):
             print('----------------------------')
     elif selected_coin.upper() == "A":
         print('')
-        print('Cryptocurrency:', Back.LIGHTRED_EX, Fore.LIGHTYELLOW_EX, crypto_symbol, Fore.RESET, Back.RESET)
+        print('Cryptocurrency:', Back.LIGHTRED_EX, Fore.LIGHTYELLOW_EX, crypto_symbol[:-4], Fore.RESET, Back.RESET)
         print('')
         print('Price:           ',Back.GREEN, Fore.LIGHTYELLOW_EX, crypto_price, '$', Fore.RESET, Back.RESET)
         print('----------------------------')
